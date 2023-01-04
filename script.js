@@ -23,4 +23,4 @@ fetch(url + randomSubreddits).then((resp)=>resp.json())
 });
 }
 button.addEventListener("click",get_meme);
-window.addEventListener("load",get_meme);
+// window.addEventListener("load",get_meme);
