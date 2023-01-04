@@ -10,6 +10,7 @@ let subreddits=["catmemes","dogmemes","wholesomemes","me_irl"];
 let updateDetails=(url,title)=>{
         meme.setAttribute("src",url);
         titles.innerHTML=title;
+        button.disabled=false;
          button.innerText = "Get Meme";
         button.classList.remove("Loading");
  };
@@ -19,6 +20,7 @@ let get_meme =()=>{
 let randomSubreddits = subreddits[Math.floor(Math.random()*subreddits.length)];
 button.classList.add("Loading");
 button.innerText = "Loading ...";
+button.disabled=true;
 fetch(url + randomSubreddits).then((resp)=>resp.json())
 .then((data)=>{
     console.log(data);
